@@ -2,23 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
-<body class="bg-warning">
-    <h1> <%= name %></h1>
-    <img src="/images/<%= imageUrl  %>" alt="" width="100">
-    <p>fiyat: <%= price %></p>
-    <p>
-       <% if (isActive) { %>
-        <span>ürün satışta</span>
-        <% } else { %>
-         <span>ürün satışta değil</span>
-       <% } %>
-             
+<body>
+    
+    <%- include("partials/nav") %> 
+    
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                 
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/images/<%= urun.imageUrl %>" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= urun.name %> </h5>
+                                <p class="card-text"><%= urun.price %> </p>
 
-    </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem non tempora eum sapiente? Eveniet, ab odit sequi, quibusdam ipsam iusto aliquam velit modi temporibus deserunt quam non sint. Reprehenderit, obcaecati.</p>
+
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nihil perspiciatis, iste animi nesciunt porro dicta autem blanditiis rerum fuga laudantium consequatur. Dolor unde, maxime esse ea voluptate nostrum ab!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
